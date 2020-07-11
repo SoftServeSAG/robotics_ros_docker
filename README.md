@@ -3,7 +3,7 @@ In this docker the installation of ROS, Gazebo 9 and some additional packages in
 
 
 ## Install
-###Install nvidia-docker 
+### Install nvidia-docker 
 ```bash
 curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | \
   sudo apt-key add -
@@ -14,10 +14,10 @@ sudo apt-get update
 sudo apt-get install nvidia-docker2
 sudo systemctl restart docker
 
-###Build docker images
+### Build docker images
+
+To build this docker you have to run the following code
 
 ```bash
-cd robotic_order_fulfillment_robotic_arm/docker/
-cd ros_gazebo_9
-sudo ./build.bash 
+docker pull lyubomyrd/robotics_ros_docker
 ```
