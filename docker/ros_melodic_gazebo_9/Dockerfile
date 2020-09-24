@@ -2,6 +2,10 @@ FROM ubuntu:18.04
 
 WORKDIR /root
 
+# set tzdata and timezone to avoid build stuck
+ENV TZ=Europe/Kiev
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
 RUN apt-get update -y && apt-get install -y \
     vim \
     tmux \
