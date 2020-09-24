@@ -30,30 +30,30 @@ RUN apt-get update && apt-get install -y \
     python-rosdep
     
 RUN apt-get update && apt-get upgrade && apt-get install -y \
-     ros-melodic-catkin 
-     ros-melodic-controller-manager 
-     ros-melodic-joint-state-controller 
-     ros-melodic-joint-trajectory-controller 
-     ros-melodic-rqt 
-     ros-melodic-rqt-controller-manager 
-     ros-melodic-rqt-joint-trajectory-controller 
-     ros-melodic-ros-control 
-     ros-melodic-rqt-gui 
-     ros-melodic-rqt-plot 
-     ros-melodic-rqt-graph 
-     ros-melodic-rqt-rviz 
-     ros-melodic-rqt-tf-tree 
-     ros-melodic-gazebo9-ros 
-     ros-melodic-kdl-conversions 
-     ros-melodic-kdl-parser 
-     ros-melodic-forward-command-controller 
-     ros-melodic-tf-conversions 
-     ros-melodic-xacro 
-     ros-melodic-joint-state-publisher 
-     ros-melodic-robot-state-publisher 
-     ros-melodic-ros-control 
-     ros-melodic-ros-controllers 
-     ros-melodic-combined-robot-hw 
+     ros-melodic-catkin \
+     ros-melodic-controller-manager \
+     ros-melodic-joint-state-controller \
+     ros-melodic-joint-trajectory-controller \
+     ros-melodic-rqt \
+     ros-melodic-rqt-controller-manager \
+     ros-melodic-rqt-joint-trajectory-controller \
+     ros-melodic-ros-control \
+     ros-melodic-rqt-gui \
+     ros-melodic-rqt-plot \
+     ros-melodic-rqt-graph \
+     ros-melodic-rqt-rviz \
+     ros-melodic-rqt-tf-tree \
+     ros-melodic-gazebo9-ros \
+     ros-melodic-kdl-conversions \
+     ros-melodic-kdl-parser \
+     ros-melodic-forward-command-controller \
+     ros-melodic-tf-conversions \
+     ros-melodic-xacro \
+     ros-melodic-joint-state-publisher \
+     ros-melodic-robot-state-publisher \
+     ros-melodic-ros-control \
+     ros-melodic-ros-controllers \
+     ros-melodic-combined-robot-hw \ 
      ros-melodic-joint-state-controller
 
 #RUN set -x && \
