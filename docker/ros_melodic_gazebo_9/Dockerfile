@@ -42,8 +42,7 @@ RUN apt-get update -y && apt-get upgrade -y && apt-get install -y \
      ros-melodic-rqt-plot \
      ros-melodic-rqt-graph \
      ros-melodic-rqt-rviz \
-     ros-melodic-rqt-tf-tree \
-     ros-melodic-gazebo9-ros \
+     ros-melodic-rqt-tf-tree \     
      ros-melodic-kdl-conversions \
      ros-melodic-kdl-parser \
      ros-melodic-forward-command-controller \
