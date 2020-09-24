@@ -29,7 +29,7 @@ RUN apt-get update && apt-get install -y \
     ros-melodic-multimaster-fkie \
     python-rosdep
     
-RUN apt-get update && apt-get upgrade && \
+RUN apt-get update && apt-get upgrade && apt-get install -y \
      ros-melodic-catkin 
      ros-melodic-controller-manager 
      ros-melodic-joint-state-controller 
