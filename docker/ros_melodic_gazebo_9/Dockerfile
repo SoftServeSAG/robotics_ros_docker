@@ -2,6 +2,12 @@ FROM ubuntu:18.04
 
 WORKDIR /root
 
+# Distribution of ROS2
+ARG distro="melodic"
+
+# Specify the distribution of ROS2
+ENV ROS_DISTRO $distro
+
 # set tzdata and timezone to avoid build stuck
 ENV TZ=Europe/Kiev
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone 
