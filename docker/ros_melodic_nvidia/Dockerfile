@@ -1,4 +1,4 @@
-FROM 1.2-glvnd-devel-ubuntu18.04 
+FROM nvidia/opengl:1.2-glvnd-devel-ubuntu18.04 
 
 WORKDIR /root
 
