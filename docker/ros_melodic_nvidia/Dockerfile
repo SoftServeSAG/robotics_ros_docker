@@ -58,8 +58,8 @@ RUN apt-get update -y && apt-get upgrade -y && apt-get install -y \
 
 RUN rosdep init && rosdep fix-permissions && rosdep update
 
-COPY dotbashrc /root/dotbashrc
-COPY dottmux.conf /root/.tmux.conf
+COPY docker/ros_melodic_nvidia/dotbashrc /root/dotbashrc
+COPY docker/ros_melodic_nvidia/dottmux.conf /root/.tmux.conf
 
 RUN echo 'export RUN_TMUX=true' >> ~/.bashrc
 RUN echo 'source /root/dotbashrc' >> ~/.bashrc
