@@ -1,0 +1,2 @@
+*/5 * * * * user sudo logrotate /etc/logrotate.d/ros2_logrotate
+# Empty line

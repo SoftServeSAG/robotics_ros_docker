@@ -1,0 +1,11 @@
+name: AWS_RMaker
+root: ~/
+
+startup_window: status
+pre_window: 
+windows:
+  - roscore:
+        - roscore
+          #  - init:
+        - rostopic list 
+
