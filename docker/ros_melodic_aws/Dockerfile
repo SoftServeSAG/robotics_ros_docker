@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y \
     gdbserver \
     python3 \
     python3-pip \
-    logrotate \
+    #logrotate \
     && rm -rf /var/lib/apt/lists/*
 RUN apt-get update && apt-get upgrade -y
 
