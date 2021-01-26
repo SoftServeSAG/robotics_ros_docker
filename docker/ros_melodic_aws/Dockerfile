@@ -1,4 +1,4 @@
-FROM lyubomyrd/ros_melodic:latest
+FROM lyubomyrd/ros_melodic_nvidia:latest
 
 WORKDIR /root
 
@@ -69,11 +69,11 @@ COPY scripts/dottmux.conf /home/$DOCKER_USER/.tmux.conf
 # copy dotbashrc
 #COPY scripts/dotbashrc /home/$DOCKER_USER/dotbashrc
 
-#RUN echo "source /opt/ros/$ROS_DISTRO/setup.bash" >> /home/$DOCKER_USER/.bashrc
+RUN echo "source /opt/ros/$ROS_DISTRO/setup.bash" >> /home/$DOCKER_USER/.bashrc
 
 #RUN echo 'export RUN_TMUX=true' >> /home/$DOCKER_USER/.bashrc
 RUN echo "PS1='\[\e[33m\][AWS_RMaker]\[\e[m\] ${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '" >> /home/$DOCKER_USER/.bashrc
-#RUN echo 'alias ra='"'"'ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'"'"'' >> /home/$DOCKER_USER/.bashrc
+RUN echo 'alias ra='"'"'ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'"'"'' >> /home/$DOCKER_USER/.bashrc
 # cd /home/ros default
 WORKDIR /home/$DOCKER_USER
 
