@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # start cron service for log rotation
-sudo service cron start
+#sudo service cron start
 
 set -e
 
