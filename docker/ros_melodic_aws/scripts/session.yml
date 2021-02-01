@@ -6,6 +6,4 @@ pre_window:
 windows:
   - roscore:
         - roscore
-          #  - init:
-        - rostopic list 
 

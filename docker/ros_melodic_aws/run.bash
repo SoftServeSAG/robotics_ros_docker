@@ -5,7 +5,7 @@ SCRIPT_PATH=$(readlink -f "$0")
 SCRIPT_DIR_PATH=$(dirname "$SCRIPT_PATH")
 WS_DIR_PATH=$(realpath "$SCRIPT_DIR_PATH/../")
 
-xhost +
+xhost +local:root
 
 docker run -it --rm \
     --privileged \
@@ -16,7 +16,6 @@ docker run -it --rm \
     --volume="$WS_DIR_PATH:/home/user/ws" \
     --net host\
     --runtime=nvidia \
-    ros_aws ./ws/docker/scripts/start.sh #tmuxinator start -p /opt/scripts/container/tmuxinator.yml
+    ros_aws tmuxinator 
 
-
-    # ros_aws tmuxinator start -p /opt/scripts/container/tmuxinator.yml
+xhost -local:root
