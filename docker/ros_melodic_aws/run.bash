@@ -13,9 +13,9 @@ docker run -it --rm \
     --device=/dev/dri:/dev/dri \
     --env="DISPLAY=$DISPLAY" \
     --env QT_X11_NO_MITSHM=1 \
-    --volume="$WS_DIR_PATH:/home/user/ws" \
+    --volume="$WS_DIR_PATH:/root/ws" \
     --net host\
     --runtime=nvidia \
-    ros_aws tmuxinator 
+    ros_aws tmuxinator
 
 xhost -local:root

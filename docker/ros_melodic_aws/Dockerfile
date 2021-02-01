@@ -53,18 +53,16 @@ RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so
 
 
 # copy tmux config
-COPY scripts/session.yml ~/.tmuxinator.yml
-COPY scripts/dotbashrc ~/dotbashrc
-COPY scripts/dottmux.conf ~/.tmux.conf
+COPY scripts/session.yml /root/.tmuxinator.yml
+COPY scripts/dotbashrc /root/dotbashrc
+COPY scripts/dottmux.conf /root/.tmux.conf
 
-RUN echo 'export RUN_TMUX=true' >> ~/.bashrc
-RUN echo 'source ~/dotbashrc' >> ~/.bashrc
+RUN echo 'export RUN_TMUX=true' >> /root/.bashrc
+RUN echo 'source ~/dotbashrc' >> /root/.bashrc
 
 
-RUN echo "source /opt/ros/$ROS_DISTRO/setup.bash" >> ~/.bashrc
+RUN echo "source /opt/ros/$ROS_DISTRO/setup.bash" >> /root/.bashrc
 
 #RUN echo 'export RUN_TMUX=true' >> /home/$DOCKER_USER/.bashrc
-RUN echo "PS1='\[\e[33m\][AWS_RMaker]\[\e[m\] ${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '" >> ~/.bashrc
-RUN echo 'alias ra='"'"'ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'"'"'' >> ~.bashrc
-# cd /home/ros default
-WORKDIR /root
+RUN echo "PS1='\[\e[33m\][AWS_RMaker]\[\e[m\] ${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '" >> /root/.bashrc
+RUN echo 'alias ra='"'"'ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'"'"'' >> /root/.bashrc
